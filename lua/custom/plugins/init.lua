@@ -54,4 +54,15 @@ return {
     'christoomey/vim-tmux-navigator',
     event = 'VeryLazy',
   },
+  {
+    'catppuccin/nvim',
+    name = 'catppuccin',
+    priotity = 1001,
+    config = function()
+      require('catppuccin').setup {
+        flavour = 'mocha', -- latte, frappe, macchiato, mocha
+      }
+      vim.cmd.colorscheme 'catppuccin-mocha'
+    end,
+  },
 }
